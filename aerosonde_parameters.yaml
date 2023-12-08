@@ -1,0 +1,81 @@
+
+physical:
+  mass: 11.0 # kg
+  Ixx: 0.824 #kg-m^2
+  Iyy: 1.135 #kg-m^2
+  Izz: 1.759 #kg-m^2
+  Ixz: 0.120 #kg-m^2
+  Surface_area_wings: 0.55 # m^2
+  b_wing_span: 2.9 # m
+  c_wing_chord: 0.19 # m
+
+motor:
+  V_max: 44.4 # V
+  D_prop: 0.508 # m
+  K_V: 0.0659 # V-s/rad, actually is 1/KV
+  K_Q: 0.0659 # N-m
+  R_motor: 0.042 # ohms
+  i_0: 1.5 # Amps
+  C_Q2: -0.01664
+  C_Q1: 0.004970
+  C_Q0: 0.005230
+  C_T2: -0.1079
+  C_T1: -0.06044
+  C_T0: 0.09357
+
+control_limits:
+  V_airspeed_magnitude_desired: 20.0
+  thrust_min: 0.0
+  thrust_max: 50.0
+  thrust_max_change_per_second: 342.9
+  control_surface_min: -0.3927 # -pi/8, -22.5
+  control_surface_max: 0.3927 # pi/8, 22.5
+  control_surface_max_change_per_second: 5.2360 # 300 degrees per second
+
+
+
+
+long_coef:
+  C_L_0: 0.23
+  C_L_alpha: 5.61
+  C_L_q: 7.95
+  C_L_elevator: 0.13
+
+  C_D_0: 0.043
+  C_D_alpha: 0.03
+  C_D_q: 0
+  C_D_elevator: 0.0135
+
+  C_M_moment_0: 0.0135
+  C_M_moment_alpha: -2.74
+  C_M_moment_q: -38.21
+  C_M_moment_elevator: -0.99
+
+
+
+lat_coef:
+  C_y_0: 0
+  C_y_beta: -0.83
+  C_y_p: 0
+  C_y_r: 0
+  C_y_aileron: 0.075
+  C_y_rudder: 0.19
+  
+  C_L_moment_0: 0
+  C_L_moment_beta: -0.13
+  C_L_moment_p: -0.51
+  C_L_moment_r: 0.25
+  C_L_moment_aileron: 0.17
+  C_L_moment_rudder: 0.0024
+
+  C_N_moment_0: 0
+  C_N_moment_beta: 0.073
+  C_N_moment_p: -0.069
+  C_N_moment_r: -0.095
+  C_N_moment_aileron: -0.011
+  C_N_moment_rudder: -0.069
+
+
+environmental:
+  rho_air_density: 1.268 # kg/m^3
+  gravity: 9.807
